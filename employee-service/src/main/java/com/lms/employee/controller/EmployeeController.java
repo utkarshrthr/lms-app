@@ -6,6 +6,7 @@ import com.lms.employee.model.Employee;
 import com.lms.employee.request.EmployeeRequest;
 import com.lms.employee.response.EmployeeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import com.lms.employee.service.EmployeeServiceImpl;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/lms/employees")
+@EnableCircuitBreaker
 public class EmployeeController {
 	
 	@Autowired
